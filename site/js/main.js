@@ -20,31 +20,6 @@ function initMenu() {
   }));
 }
 
-function initForm() {
-  const form = document.getElementById('contactForm');
-  const msg = document.getElementById('formMsg');
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const name = (data.get('name')||'').toString().trim();
-    const phone = (data.get('phone')||'').toString().trim();
-    const email = (data.get('email')||'').toString().trim();
-    const message = (data.get('message')||'').toString().trim();
-    if (!name || !phone || !message) {
-      msg.textContent = 'Vul naam, telefoon en bericht in.';
-      msg.style.color = 'var(--warn)';
-      return;
-    }
-    const subject = encodeURIComponent("Offerte/Service aanvraag – Xavi's Koeltechniek");
-    const body = encodeURIComponent(`Naam: ${name}\nTel/WhatsApp: ${phone}\nE-mail: ${email}\n\nBericht:\n${message}`);
-    const href = `mailto:info@xaviskoeltechniek.sr?subject=${subject}&body=${body}`;
-    window.location.href = href;
-    msg.textContent = 'Je e-mailapp wordt geopend. Bedankt!';
-    msg.style.color = 'var(--ok)';
-    form.reset();
-  });
-}
-
 function initYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) {
@@ -59,11 +34,10 @@ if (typeof document !== 'undefined') {
       loadPartial('site-footer', 'partials/footer.html')
     ]);
     initMenu();
-    initForm();
     initYear();
   });
 }
 
 if (typeof module !== 'undefined') {
-  module.exports = { loadPartial, initMenu, initForm, initYear };
+  module.exports = { loadPartial, initMenu, initYear };
 }

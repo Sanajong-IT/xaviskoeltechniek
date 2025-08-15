@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xavi's Koeltechniek — Airco & Koeling in Paramaribo</title>
+  <meta name="description" content="Xavi's Koeltechniek repareert en installeert airco's en koelsystemen in Paramaribo, Suriname. Snel, betrouwbaar en betaalbaar. Bel of WhatsApp ons voor een offerte." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <!-- Performance: use system font stack to stay lightweight -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Xavi's Koeltechniek — Airco & Koeling" />
+  <meta property="og:description" content="Reparatie, installatie en onderhoud van airco's en koelsystemen in Paramaribo, Suriname." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://xavis-koeltechniek.pages.dev/" />
+  <meta property="og:image" content="/og-cover.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%230ea5e9' d='M50 2a48 48 0 1 0 0 96 48 48 0 0 0 0-96Zm0 12c20 0 36 16 36 36S70 86 50 86 14 70 14 50 30 14 50 14Z'/%3E%3Cpath fill='%23038acb' d='M50 20a30 30 0 1 0 0 60 30 30 0 0 0 0-60Zm0 10a20 20 0 1 1 0 40 20 20 0 0 1 0-40Z'/%3E%3C/svg%3E" />
+  
+  <style>
+    :root{
+      --bg: #0b1220;
+      --bg-soft:#0f172a;
+      --text:#e5f2ff;
+      --muted:#a9c1d9;
+      --brand:#0ea5e9; /* sky-500 */
+      --brand-600:#0284c7;
+      --accent:#22d3ee; /* cyan-400 */
+      --ok:#10b981; /* emerald */
+      --warn:#f59e0b; /* amber */
+      --danger:#ef4444; /* red */
+      --card: rgba(15, 23, 42, 0.72);
+      --card-border: rgba(148, 163, 184, 0.18);
+      --shadow: 0 10px 30px rgba(2, 132, 199, 0.15);
+      --radius-xl: 1.25rem;
+      --radius-2xl: 1.5rem;
+      --maxw: 1200px;
+      --grid-gap: clamp(14px, 2vw, 22px);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f8fafc;
+        --bg-soft:#ffffff;
+        --text:#0b1220;
+        --muted:#4b5563;
+        --card: #ffffffcc;
+        --card-border: rgba(2, 132, 199, 0.15);
+        --shadow: 0 8px 24px rgba(2, 132, 199, 0.10);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text); background: radial-gradient(1200px 800px at 80% -10%, rgba(34,211,238,0.15), transparent 40%), radial-gradient(1000px 600px at -10% 10%, rgba(14,165,233,0.18), transparent 40%), var(--bg);
+      overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width: var(--maxw); margin:0 auto; padding: clamp(16px, 3vw, 32px)}
+    .btn{display:inline-flex; gap:.6rem; align-items:center; padding:.8rem 1.1rem; border-radius:999px; background:linear-gradient(180deg, var(--brand), var(--brand-600)); color:white; border:1px solid rgba(255,255,255,.15); box-shadow: var(--shadow); font-weight:600; letter-spacing:.2px}
+    .btn.secondary{background:transparent; color:var(--text); border:1px solid var(--card-border)}
+    .btn:focus-visible{outline: 3px solid color-mix(in oklab, var(--accent) 40%, transparent)}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(8px); background: color-mix(in oklab, var(--bg-soft) 88%, transparent); border-bottom:1px solid var(--card-border)}
+    nav{display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:.75rem; font-weight:800}
+    .brand-logo{width:36px; height:36px; border-radius:10px; background:radial-gradient(120% 120% at 30% 20%, var(--accent), var(--brand-600)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.2)}
+    .nav-links{display:flex; gap:1rem}
+    .nav-links a{padding:.6rem .9rem; border-radius:999px}
+    .nav-links a:hover{background: color-mix(in oklab, var(--brand) 12%, transparent)}
+    .menu-btn{display:none}
+    @media (max-width: 860px){
+      .menu-btn{display:inline-flex;}
+      .nav-links{position:fixed; inset:60px 16px auto 16px; background:var(--card); border:1px solid var(--card-border); border-radius: var(--radius-xl); padding:12px; flex-direction:column; transform:translateY(-130%); transition: transform .25s ease; box-shadow: var(--shadow)}
+      .nav-links.open{transform:translateY(0)}
+    }
+
+    .hero{display:grid; grid-template-columns: 1.2fr 1fr; gap: var(--grid-gap); align-items:center; padding: clamp(24px, 6vw, 64px) 0}
+    .hero-card{background: var(--card); border:1px solid var(--card-border); border-radius: var(--radius-2xl); padding: clamp(18px, 3.5vw, 32px); box-shadow: var(--shadow)}
+    .hero h1{font-size: clamp(28px, 4vw, 48px); line-height:1.1; margin:0 0 .6rem; letter-spacing:.2px}
+    .hero p{margin:0 0 1.2rem; color: var(--muted)}
+    .hero .actions{display:flex; gap:.75rem; flex-wrap:wrap}
+    .hero-visual{min-height: 280px; border-radius: var(--radius-2xl); background: conic-gradient(from 220deg at 70% 30%, rgba(14,165,233,.22), rgba(34,211,238,.18), transparent 60%), linear-gradient(180deg, rgba(2,8,23,.2), rgba(2,8,23,.4)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="%230ea5e9"/><stop offset="1" stop-color="%2322d3ee"/></linearGradient></defs><g fill="none" stroke="url(%23g)" stroke-opacity="0.6"><circle cx="400" cy="200" r="160"/><circle cx="400" cy="200" r="120"/><circle cx="400" cy="200" r="80"/></g></svg>'); background-size:cover; border:1px solid var(--card-border); box-shadow: var(--shadow); position:relative; overflow:hidden}
+    .pill{display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .7rem; border-radius:999px; background: color-mix(in oklab, var(--brand) 16%, transparent); border:1px solid var(--card-border); color: var(--text); font-size:.85rem}
+
+    section{padding: clamp(28px, 6vw, 72px) 0}
+    h2{font-size: clamp(22px, 3.2vw, 34px); margin:.2rem 0 1rem}
+    .grid{display:grid; gap: var(--grid-gap)}
+    .grid.cards{grid-template-columns: repeat(3, 1fr)}
+    @media (max-width: 980px){ .hero{grid-template-columns: 1fr} .grid.cards{grid-template-columns: 1fr 1fr} }
+    @media (max-width: 640px){ .grid.cards{grid-template-columns: 1fr} }
+    .card{background: var(--card); border:1px solid var(--card-border); border-radius: var(--radius-xl); padding: clamp(14px, 2.5vw, 22px); box-shadow: var(--shadow)}
+    .card h3{margin:.2rem 0 .4rem; font-size:1.1rem}
+    .muted{color: var(--muted)}
+
+    .features{display:grid; grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap)}
+    @media (max-width: 980px){ .features{grid-template-columns: repeat(2, 1fr)} }
+    @media (max-width: 520px){ .features{grid-template-columns: 1fr} }
+
+    .badge{display:inline-flex; gap:.5rem; align-items:center; padding:.35rem .6rem; border-radius:10px; background: color-mix(in oklab, var(--ok) 16%, transparent); border:1px solid var(--card-border); font-size:.9rem}
+
+    .cta{display:grid; grid-template-columns: 1fr 1.1fr; gap: var(--grid-gap); align-items:center}
+    @media (max-width: 900px){ .cta{grid-template-columns:1fr} }
+
+    .footer{border-top:1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted)}
+    .small{font-size:.9rem}
+
+    /* Accessible skip link */
+    .skip{position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{position:static; width:auto; height:auto; background:var(--brand); color:white; padding:.5rem 1rem; border-radius:8px}
+
+    /* Utility */
+    .center{display:grid; place-items:center}
+    .right{justify-content:flex-end}
+  </style>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Xavi's Koeltechniek",
+    "image": "https://xavis-koeltechniek.pages.dev/og-cover.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SR",
+      "addressLocality": "Paramaribo",
+      "streetAddress": "",
+      "postalCode": ""
+    },
+    "telephone": "+597-000-000",
+    "email": "info@xaviskoeltechniek.sr",
+    "url": "https://xavis-koeltechniek.pages.dev",
+    "areaServed": "Suriname",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Direct naar inhoud</a>
+  <header>
+    <div class="container">
+      <nav aria-label="Hoofd navigatie">
+        <a href="#home" class="brand">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span>Xavi's Koeltechniek</span>
+        </a>
+        <button class="menu-btn btn secondary small" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+        <div class="nav-links" id="navLinks">
+          <a href="#diensten">Diensten</a>
+          <a href="#over">Over ons</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container hero" id="home">
+      <div class="hero-card">
+        <span class="pill" aria-label="Servicegebied">Paramaribo • Suriname</span>
+        <h1>Airco & koeltechniek — snel, vakkundig, betrouwbaar</h1>
+        <p>Installatie, reparatie en onderhoud van airco-units, koelkasten, vriezers en commerciële koelsystemen. We komen op locatie en denken mee voor duurzame, energiezuinige oplossingen.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/597000000" target="_blank" rel="noopener">WhatsApp afspraak</a>
+          <a class="btn secondary" href="#contact">Gratis offerte</a>
+        </div>
+      </div>
+      <div class="hero-visual" role="img" aria-label="Abstracte koeling-visual met ringen en koele kleuren"></div>
+    </section>
+
+    <section class="container" id="diensten" aria-labelledby="diensten-title">
+      <h2 id="diensten-title">Onze diensten</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Airco installatie</h3>
+          <p class="muted">Professionele montage van split- en inverter-units. Nette afwerking, correcte vacuümtest en koelmiddelinregeling voor maximale levensduur.</p>
+        </article>
+        <article class="card">
+          <h3>Reparatie & storingen</h3>
+          <p class="muted">Snelle diagnose en herstel van lekkages, compressorfouten, printplaatproblemen en meer — voor airco's en koelingen.</p>
+        </article>
+        <article class="card">
+          <h3>Onderhoud & reiniging</h3>
+          <p class="muted">Grondige chemische reiniging voor frisse lucht en lager verbruik. Voorkomt schimmel, geur en onnodige slijtage.</p>
+        </article>
+        <article class="card">
+          <h3>Commerciële koeling</h3>
+          <p class="muted">Koel- en vriescellen, displaykoelingen en horeca–oplossingen. We bouwen, onderhouden en optimaliseren.</p>
+        </article>
+        <article class="card">
+          <h3>Energie advies</h3>
+          <p class="muted">Besparen met de juiste capaciteit, plaatsing en instellingen. We meten en adviseren op locatie.</p>
+        </article>
+        <article class="card">
+          <h3>Noodservice</h3>
+          <p class="muted">Wanneer het heet is, moet het snel. We plannen met voorrang bij kritieke storingen (indien beschikbaar).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="waarom-title">
+      <h2 id="waarom-title">Waarom kiezen voor ons?</h2>
+      <div class="features">
+        <div class="card"><span class="badge" aria-hidden="true">⚡ Snel ter plekke</span><p class="muted">In Paramaribo en omgeving normaal binnen korte tijd op locatie.</p></div>
+        <div class="card"><span class="badge" aria-hidden="true">🛠️ Vakmanschap</span><p class="muted">Gecertificeerde technici, correcte koelmiddel–handling en nette afwerking.</p></div>
+        <div class="card"><span class="badge" aria-hidden="true">🌿 Zuinig & stil</span><p class="muted">We adviseren efficiënte inverter–modellen en juiste capaciteit voor comfort én kosten.</p></div>
+        <div class="card"><span class="badge" aria-hidden="true">🧼 Hygiënisch</span><p class="muted">Gezonde binnenlucht met periodieke dieptereiniging en schimmelpreventie.</p></div>
+      </div>
+    </section>
+
+    <section class="container cta" id="over" aria-labelledby="over-title">
+      <div class="hero-card">
+        <h2 id="over-title">Over Xavi's Koeltechniek</h2>
+        <p class="muted">We zijn een Surinaams bedrijf in Paramaribo, gespecialiseerd in airconditioning en koelinstallaties voor particulieren en bedrijven. Eerlijk advies, transparante prijzen en afspraken die we nakomen.</p>
+        <ul class="muted">
+          <li>✔ Meerjarige ervaring in particuliere & zakelijke projecten</li>
+          <li>✔ Werken volgens veilige en nette werkmethodes</li>
+          <li>✔ Garantie op werkzaamheden</li>
+        </ul>
+      </div>
+      <div class="hero-visual center" aria-hidden="true">
+        <div class="card" style="max-width:560px">
+          <h3>Onderhoudsplan (voorbeeld)</h3>
+          <p class="muted">Airco 12.000 BTU — 2x per jaar dieptereiniging, druktest, lekcheck en statusrapport.</p>
+          <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px">
+            <div class="card"><strong>Voordeel</strong><p class="muted">Lagere stroomkosten en langere levensduur.</p></div>
+            <div class="card"><strong>Herinnering</strong><p class="muted">We plannen tijdig zodat je nooit zonder koeling zit.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact & offerte</h2>
+      <div class="grid" style="grid-template-columns: 1.1fr 1fr; gap: var(--grid-gap)">
+        <form class="card" id="contactForm" novalidate>
+          <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px">
+            <label>Naam<br><input name="name" required placeholder="Voor- en achternaam" /></label>
+            <label>Telefoon (WhatsApp)<br><input name="phone" required inputmode="tel" placeholder="+597 ..." /></label>
+          </div>
+          <label>E-mail (optioneel)<br><input name="email" inputmode="email" placeholder="you@example.com" /></label>
+          <label>Bericht<br><textarea name="message" required rows="4" placeholder="Beschrijf de klus: type airco/koeling, klacht, gewenste datum..."></textarea></label>
+          <div class="right"><button class="btn" type="submit">Verstuur</button></div>
+          <p id="formMsg" class="muted small" role="status" aria-live="polite"></p>
+        </form>
+        <div class="card">
+          <h3>Direct contact</h3>
+          <p class="muted">Bel of WhatsApp voor snelle hulp in Paramaribo en omgeving.</p>
+          <p><strong>Tel/WhatsApp:</strong> <a href="tel:+597000000">+597 000 000</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:info@xaviskoeltechniek.sr">info@xaviskoeltechniek.sr</a></p>
+          <p class="muted small">We werken ma–za • 08:00–18:00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div style="display:flex; gap:12px; justify-content:space-between; flex-wrap:wrap">
+      <div>© <span id="year"></span> Xavi's Koeltechniek • Paramaribo, Suriname</div>
+      <div class="small">Website supersnel en privacyvriendelijk • Gehost op Cloudflare Pages</div>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal JS: accessible mobile menu and basic form handling
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn?.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    // Close on link click (mobile)
+    navLinks?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Contact form: build a mailto link to keep it serverless
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMsg');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = (data.get('name')||'').toString().trim();
+      const phone = (data.get('phone')||'').toString().trim();
+      const email = (data.get('email')||'').toString().trim();
+      const message = (data.get('message')||'').toString().trim();
+      if(!name || !phone || !message){
+        msg.textContent = 'Vul naam, telefoon en bericht in.';
+        msg.style.color = 'var(--warn)';
+        return;
+      }
+      const subject = encodeURIComponent('Offerte/Service aanvraag – Xavi\'s Koeltechniek');
+      const body = encodeURIComponent(`Naam: ${name}\nTel/WhatsApp: ${phone}\nE-mail: ${email}\n\nBericht:\n${message}`);
+      const href = `mailto:info@xaviskoeltechniek.sr?subject=${subject}&body=${body}`;
+      window.location.href = href;
+      msg.textContent = 'Je e-mailapp wordt geopend. Bedankt!';
+      msg.style.color = 'var(--ok)';
+      form.reset();
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Optional: Privacy-friendly Cloudflare Web Analytics (add your token) -->
+  <!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"YOUR_TOKEN_HERE"}'></script> -->
+</body>
+</html>

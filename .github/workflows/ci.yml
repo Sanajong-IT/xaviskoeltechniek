@@ -1,0 +1,43 @@
+name: CI - Tests and Lint
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
+      - name: Upload JUnit results (if available)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-results
+          path: jest-junit.xml
+          if-no-files-found: ignore
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci
+      - name: Install linters
+        run: npm install --no-save eslint htmlhint
+      - name: Run JS lint (eslint)
+        run: npx eslint .
+        continue-on-error: true
+      - name: Run HTML lint (htmlhint)
+        run: npx htmlhint '**/*.html'
+        continue-on-error: true

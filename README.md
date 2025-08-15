@@ -4,7 +4,7 @@ Website for **Xavi's Koeltechniek**.
 
 ## Development
 
-The static site lives in the `site/` directory. Shared sections such as the header and footer reside in `site/partials/` and are injected at runtime. Styles and scripts are organised into `site/css/` and `site/js/`.
+The static site lives in the `site/` directory. Shared sections such as the header and footer reside in `site/partials/` and are injected at runtime. Styles and scripts are organised into `site/css/` and `site/js/`. A root `index.html` is kept only to redirect to `site/` for compatibility; edit pages within the `site/` folder.
 
 To view the site locally, serve the `site/` directory over HTTP (partials are fetched via JavaScript):
 
